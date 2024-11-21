@@ -1,0 +1,491 @@
+    /* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #1a1d3a; 
+        color: #fff;
+        background-image: url('Images/bg1.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat;
+        backdrop-filter: blur;
+        background-attachment: fixed; 
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Make the nav bar fixed */
+nav {
+    position: fixed; /* Fix the navbar */
+    top: 0  ; /* Align it to the top */
+    width: 100%; /* Make it full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    background-color: black;
+    z-index: 1;  /* Ensure it is above other elements */
+}
+/* Example styling for weather widget */
+.weather{
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+    .container {
+        padding-top: 125px; /* Adjust based on nav height */
+    }
+
+    .logo {
+        width: 320px;
+    }
+
+    nav ul {
+        display: flex;
+        margin-right: 70px;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+        font-weight: 00;
+        font-style: italic; 
+    }
+
+    nav ul li a::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: radial-gradient(circle, #FF004F 0%, #FF355E 70%, rgba(255, 255, 255, 0) 100%); 
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        transition: width 0.5s, box-shadow 0.5s, opacity 0.5s; 
+        box-shadow: 0 0 10px #FF004F;
+        opacity: 0; 
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+        opacity: 1; 
+        box-shadow: 0 0 20px #FF004F;
+    }
+
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text {
+        flex: 1;
+        padding-left: 120px; 
+    }
+
+    .text h1 {
+        font-size: 90px;
+        color: #00bfff;
+        margin: 0;
+        animation: slideInLeft 1s ease-in-out;
+        font-weight: 700; 
+    }
+
+    .text h2 {
+        font-size: 30px; 
+        padding-top: 15px;
+        padding-left: 6px;
+        animation: slideInLeft 1s ease-in-out;
+    }
+
+    .image {
+        padding-right: 160px;
+        text-align: center;
+        opacity: 1; 
+        transition: opacity 0.5s ease;
+    }
+
+    .image img {
+        margin-top: 40px;
+        height: 460px;
+        width: 460px;
+        animation: slideInRight 1s ease-in-out;
+        transition: box-shadow 0.3s ease; 
+        border-radius: 50%; 
+    }
+
+    .image img:hover {
+        box-shadow: 0 0 5px #00bfff, 0 0 50px #00bfff, 0 0 12px #00bfff; 
+    }
+
+    .cv-button {
+        margin-top: 20px;
+        margin-left: 8px;
+        background-color: rgba(255, 255, 255, 0.1); 
+        color: #00bfff; 
+        padding: 15px 30px;
+        border: 2px solid transparent; 
+        border-radius: 30px;
+        border-color: #00bfff;
+        cursor: pointer;
+        font-size: 18px;
+        animation: fadeInUp 1s ease-in-out;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        font-weight: 600;
+        font-style: italic; 
+    }
+
+    .cv-button:hover {
+        background-color: rgba(255, 255, 255, 0.2); 
+        color: #00bfff; 
+        border-color: #00bfff; 
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px rgba(0, 191, 255, 0.4);
+    }
+
+    .section {
+        padding: 80px 20px; 
+    }
+
+    .top-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .top-header h1 {
+        font-size: 36px;
+        color: #fff;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px; 
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .contact,
+    footer {
+        font-family: "Poppins", sans-serif;
+    }
+
+    .about .about-content,
+    .skills .skills-content,
+    .contact .contact-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    section .title {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    section .title::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 180px;
+        height: 3px;
+        background: #FF004F;
+        transform: translateX(-50%);
+    }
+
+    section .title::after {
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        padding: 5px;
+        font-size: 20px;
+        color: crimson;
+        background: #fff;
+        border-radius: 20px;
+        padding: 5px 10px;
+        transform: translateX(-50%);
+    }
+
+
+    .skills .title::before,
+    .contact .title::before {
+        background: #FF004F;
+    }
+
+    /* about section styling */
+    .about .title::after {
+        content: "Who am I";
+    }
+
+    .about .about-content .left {
+        width: 50%;
+    }
+
+    .about .about-content .left img {
+        height: 400px;
+        width: 400px;
+        margin-left: 160px;
+        object-fit: contain;
+    }
+
+    .about .about-content .right {
+        width: 50%;
+    }
+
+    .about .about-content .right .text {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .about .about-content .right .text span {
+        color: crimson;
+    }
+
+    .about .about-content .right p {
+        margin-right: 160px;
+        text-align: justify;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+
+    .about .about-content .right a {
+        display: inline-block;
+        background: crimson;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 3px 25px;
+        border-radius: 6px;
+        border: 2px solid crimson;
+        transition: all 0.3s ease;
+    }
+
+    .about .about-content .right a:hover {
+        color: crimson;
+        background: transparent;
+    }
+
+
+    .services { 
+        padding-top: 25px;
+        background: transparent;
+    }
+
+    .services .title::after {
+        content: "What I Offer";
+    }
+
+    .services-content {
+        padding-top: -10px; /* Adjust based on your nav bar height */
+    /* Adjust based on your nav bar height */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 15px;
+        column-gap: 20px;
+    }
+
+    .service {
+        position: relative;
+        width: 25%;
+        padding: 30px 50px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        text-align: center; /* Center-align text elements */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+    }
+
+    .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .service img {
+        width: 100px; /* Set a fixed size */
+        height: 100px; /* Set a fixed size */
+        object-fit: cover; /* Ensure image covers the specified area */
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .service:hover img {
+        transform: scale(1.2);
+    }
+
+    .service h3 {
+        font-size: 24px;
+        color: #00bfff;
+        margin-bottom: 10px;
+        font-weight: 600;
+        margin: auto; /* Center-align */
+    }
+
+    .service p {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.5;
+        margin: auto; /* Center-align */
+    }
+
+    .blur-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: -1;
+    }
+
+    .service:hover .blur-background {
+        opacity: 1;
+    }
+
+    .skills {
+        background: transparent;
+        color: #fff;
+        padding: 80px 30px;
+    }
+
+    .skills .title::after {
+        content: "What I know";
+    }
+
+    .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .skill {
+        text-align: center;
+        width: 220px;
+        margin-bottom: 30px;
+    }
+
+    .skill img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto 10px;    
+    }
+
+    /* Projects section styles */
+.projects {
+    padding: 60px 0;
+}
+
+.projects .max-width {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projects .title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects .projects-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projects .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.projects .project-card:hover {
+    transform: scale(1.05);
+}
+
+.projects .project-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.projects .project-card .count {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00bfff;
+}
+
+
+
+    @keyframes slideInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

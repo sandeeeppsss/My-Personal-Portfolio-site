@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep-Portfolio</title>
+    <link rel="stylesheet" href="me.css">
+    <style>
+        /* Styles specific to weather display */
+        .weather-info {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #ff04ff;
+            display: inline-flex;
+            align-items: center;
+        }
+        .weather-info img {
+            margin-left: 5px;
+            width: 25px; /* Adjust as needed */
+            height: 25px; /* Adjust as needed */
+        }
+        /* Styles specific to newsletter subscription */
+        .subscription-form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .subscription-form input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #00bfff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .subscription-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00bfff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .subscription-form button:hover {
+            background: #00a3cc;
+        }
+        .subscription-form .message {
+            margin-top: 10px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="Images/mylogo.jpg" class="logo">
+            <ul class="hello">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <span id="weather" class="weather-info">
+                        <?php include ('weather.php'); ?>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container2" id="home">
+        <div class="text">
+            <h1 id="greeting">Hi, I'm Sandeep!</h1>
+            <h2>a WEB DEVELOPER</h2>
+            <button class="cv-button">Download CV</button>
+        </div>
+        <div class="image">
+            <img src="Images/Sandeep-modified.png"> 
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title fadein">About me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/Sandeep-modified.png" alt="Sandeep">   
+                </div>
+                <div class="column right">
+                    <p>Hello! My name is Sandeep, and I am currently a third-year B.Tech student specializing in Computer Science and Engineering at Puducherry Technological University. My journey into the world of technology has been incredibly rewarding and filled with learning experiences that have shaped my skills and aspirations. From an early age, I was fascinated by how technology can solve real-world problems and improve our daily lives. This curiosity led me to pursue a degree in Computer Science, where I could dive deep into the intricacies of software development, algorithms, and data structures. Throughout my academic career, I have consistently pushed myself to learn and grow, both inside and outside the classroom.</p> <br>
+                    <p>I am passionate about translating design concepts into interactive digital experiences and continuously improving my skill set to stay updated with the latest industry trends. My portfolio showcases a variety of projects that demonstrate my ability to deliver responsive and dynamic web applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services" id="services">
+        <div class="title">Services</div>
+        <div class="services-content">
+            <div class="service">
+                <img src="Images/web-development.png">
+                <h3>Web development</h3>
+                <div class="blur-background"></div>
+            </div>
+            <div class="service">
+                <img src="Images/mobile-app-development.png" alt="Service 2">
+                <h3>Mobile Application Development</h3>
+                <div class="blur-background"></div>
+            </div>
+            <div class="service">
+                <img src="Images/data-analytics.png">
+                <h3>Data Analytics</h3>
+                <div class="blur-background"></div>
+            </div>
+            <div class="service">
+                <img src="Images/ui-ux-design.png">
+                <h3>UI/UX design</h3>
+                <div class="blur-background"></div>
+            </div>
+            <div class="service">
+                <img src="Images/graphic-design.png">
+                <h3>Graphic Design</h3>
+                <div class="blur-background"></div>
+            </div>
+            <div class="service">
+                <img src="Images/digital-marketing.png">
+                <h3>Digital Marketing</h3>
+                <div class="blur-background"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title fadein">Skills explored</h2>
+            <div class="skills-content">
+                <div class="skill">
+                    <img src="images/html.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="images/CSS.png" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="images/Bootstrap.svg" alt="Bootstrap">
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill">
+                    <img src="images/js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="images/react.svg" alt="React">
+                    <span>React JS</span>
+                </div>
+                <div class="skill">
+                    <img src="images/php.png" alt="PHP">
+                    <span>PHP</span>
+                </div>
+                <div class="skill">
+                    <img src="images/Python.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <img src="images/java.png" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="skill">
+                    <img src="images/canva.svg" alt="Canva">
+                    <span>Canva</span>
+                </div>
+                <div class="skill">
+                    <img src="images/figma.png" alt="Figma">
+                    <span>Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h2 class="title">Projects</h2>
+            <div class="projects-content">
+                <div class="project-card">
+                    <h3>Completed Projects</h3>
+                    <div class="count" data-count="5">0</div>
+                </div>
+                <div class="project-card">
+                    <h3>Ongoing Projects</h3>
+                    <div class="count" data-count="3">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="max-width">
+            <h2 class="title">Resume</h2>
+            <div class="resume-content">
+                <a href="path/to/your-resume.pdf" download="Your_Resume.pdf" class="resume-button">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="max-width">
+            <h2 class="title">Let's Connect</h2>
+            <div class="contact-content">
+                <form id="contact-form" action="email.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="number">Phone number:</label>
+                    <input type="number" id="number" name="number" required>
+                
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                
+                    <input type="submit" value="Submit">
+                    <p id="response-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section id="newsletter">
+        <div class="subscription-form">
+            <h2>Subscribe to our Newsletter</h2>
+            <form id="subscription-form">
+                <input type="email" id="email-subscription" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+                <p id="subscription-response" class="message"></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="me.js"></script>
+    <script>
+        // AJAX for contact form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('email.php', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.text()).then(result => {
+                document.getElementById('response-message').textContent = result;
+            }).catch(error => console.error('Error:', error));
+        });
+
+        // AJAX for newsletter subscription
+        document.getElementById('subscription-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('email-subscription').value;
+            fetch('subscribe.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'email=' + encodeURIComponent(email)
+            }).then(response => response.text()).then(result => {
+                document.getElementById('subscription-response').textContent = result;
+                document.getElementById('subscription-form').reset();
+            }).catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
